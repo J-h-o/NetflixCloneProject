@@ -1,0 +1,151 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: sans-serif;
+    color: #333;
+}
+
+.signInContainer {
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    background-color: white;
+    min-height: 300px;
+    max-height: 100%;
+    height: 600px;
+    width: 450px;
+    box-shadow: rgba(0,0,0,0.1) 0 2px 5px;
+    overflow: auto;
+}
+
+.columnLogin {
+    background-color: white;
+    min-height: 300px;
+    max-height: 100%;
+    height: 400px;
+    width: 450px;
+    box-shadow: rgba(0,0,0,0.1) 0 2px 5px;
+    overflow: auto;
+}
+
+.column form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"] {
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+.column form input[type="submit"] {
+    background-color: tomato;
+    color: white;
+    height: 36px;
+    width: 88px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0 2px 5px;
+    font-size: 16px;
+    align-self: center;
+}
+
+.column .header {
+    padding: 2rem;
+}
+
+.column .header h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    padding-top: 16px;
+    color: #000;
+}
+
+.column .header span {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.column .header img {
+    width: 150px;
+    padding-left: 30%;
+}
+
+.signInMessage {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    color: tomato;
+}
+
+.columnLogin form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.columnLogin form input[type="text"],
+.columnLogin form input[type="email"],
+.columnLogin form input[type="password"] {
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+.columnLogin form input[type="submit"] {
+    background-color: tomato;
+    color: white;
+    height: 36px;
+    width: 88px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0 2px 5px;
+    font-size: 16px;
+    align-self: center;
+}
+
+.columnLogin .header {
+    padding: 2rem;
+}
+
+.columnLogin .header h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    padding-top: 16px;
+    color: #000;
+}
+
+.columnLogin .header span {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.columnLogin .header img {
+    width: 150px;
+    padding-left: 30%;
+}
