@@ -149,3 +149,10 @@ html, body {
     width: 150px;
     padding-left: 30%;
 }
+
+.errorMessage {
+    color: tomato;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
