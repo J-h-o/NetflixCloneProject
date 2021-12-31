@@ -3,16 +3,17 @@
 Cloneflix is a university project I made using PHP, HTML, CSS, JS and utilizing XAMPP as the localserver.
 
 ## Roadmap
-* [ ] Homepage
-* [ ] Movie page
-* [ ] User account page
+* [x] Homepage
+* [x] Browse page
+* [x] Login
+* [x] Signup
+* [ ] Video playback page
 * [ ] User account
 * [ ] Payments
 
 To be updated as project progresses.
 
 ## Installation
-ß
 
 ## Usage
 
