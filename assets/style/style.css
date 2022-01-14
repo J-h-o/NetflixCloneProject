@@ -315,6 +315,7 @@ button i {
     display: flex;
     flex-direction: column;
     width: 230px;
+    position: relative;
 }
 
 .episodeContainer img {
@@ -354,6 +355,8 @@ button i {
     font-size: 35px;
     padding: 40px;
     color: white;
+    background-color:transparent;
+    border : none;
 }
 
 .transparent {
@@ -407,4 +410,109 @@ button i {
     color:white;
     font-size:20px;
     margin-left: 20px;
+}
+
+.upNext {
+    height: 100%;
+    justify-content: center;
+}
+
+.upNextContainer button{
+    padding: 0;
+}
+
+.upNextThumbnail {
+    height: 130px;
+}
+
+.upNextContainer h2, .upNextContainer h3{
+    color: white;
+}
+
+.watchNav {
+    z-index: 2;
+}
+
+.seen {
+    color:green;
+    font-size:26px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.previewCategories h1{
+    color: white;
+    margin-left: 35px;
+}
+
+.textboxContainer {
+    padding: 100px 50px;
+}
+
+.searchInput {
+    height: 50px;
+    width: 700px;
+    border: 1px solid white;
+    background-color:transparent;
+    color:white;
+    font-size:20px;
+    padding:5px 10px;
+    border-radius:5px;
+}
+
+.settingsContainer {
+    height:100%;
+    padding-top: 60px;
+    background-color: transparent;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.settingsContainer h2 {
+    color:white;
+}
+
+.settingsContainer .formSection{
+    display:flex;
+    margin: 20px 0;
+    border-bottom: 1px solid white;
+    padding-bottom:20px;
+}
+
+.settingsContainer form input[type="text"],
+.settingsContainer form input[type="password"],
+.settingsContainer form input[type="email"] {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    margin: 5px 0;
+    border:none;
+    border-radius:5px;
+    padding:0 5px;
+}
+
+.alertSuccess, .alertError {
+    margin: 10px, 0;
+}
+
+.alertSuccess {
+    color: green;
+}
+
+.alertError{
+    color: red;
+}
+
+.formSectionPayment a{
+    color: green;
+}
+
+.formSectionPayment {
+    display:flex;
+    flex-direction: column;
+    margin: 20px 0;
+    border-bottom: 1px solid white;
+    padding-bottom:20px;
 }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 class PreviewProvider{
 
     private $con;
@@ -10,6 +10,37 @@ class PreviewProvider{
         $this->username=$username;
     }
 
+
+    public function createCategoryPreview($categoryId){
+        $entitiesArray = EntityProvider::getEntities($this->con,$categoryId,1);
+
+        if(sizeof($entitiesArray) == 0) {
+            ErrorMessage::show("Nothing to display :(");
+        };
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    }
+
+    public function createMovieShowPreview(){
+        $entitiesArray = EntityProvider::getMovieEntities($this->con,null,1);
+
+        if(sizeof($entitiesArray) == 0) {
+            ErrorMessage::show("No Movies to display");
+        };
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    }
+
+    public function createTvShowPreview(){
+        $entitiesArray = EntityProvider::getTvEntities($this->con,null,1);
+
+        if(sizeof($entitiesArray) == 0) {
+            ErrorMessage::show("No TV Shows to display");
+        };
+
+        return $this->createPreviewVideo($entitiesArray[0]);
+    }
+
     public function createPreviewVideo($entity){
         if($entity==null){
             $entity = $this->getRandomEntity();
@@ -19,6 +50,12 @@ class PreviewProvider{
         $id = $entity->getId();
         $thumbnail = $entity->getThumbnail();
         $preview = $entity->getPreview();
+        $videoId = VideoProvider::getEntityVideoForUser($this->con,$id, $this->username);
+        $video = new Video($this->con, $videoId);
+        $seasonEpisode = $video->getSeasonAndEpisode();
+        $subtitle = $video->isMovie() ? "" : "<h4 style='color:white'>$seasonEpisode</h4>";
+        $inProgress = $video->isInProgress($this->username);
+        $playButtonText = $inProgress ? " Continue" : " Play";
 
         return "<div class='previewContainer'>
                     <img src='$thumbnail' class='previewImage' hidden/>
@@ -30,9 +67,9 @@ class PreviewProvider{
                     <div class='previewOverlay'>
                         <div class='mainDetails'>
                             <h3>$name</h3>
-
+                            $subtitle
                             <div class='buttons'>
-                                <button><i class='fas fa-play button-spacer'></i>Play</button>
+                                <button onClick='playNext($videoId)'><i class='fas fa-play button-spacer'></i>$playButtonText</button>
                                 <button onClick='volumeToggle(this)'><i class='fas fa-volume-mute'></i></button>
                             </div>
                         </div>

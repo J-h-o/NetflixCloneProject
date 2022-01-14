@@ -23,6 +23,34 @@ class CategoryContainers{
         return $html."</div>";
     }
 
+    public function showTvCategories(){
+        $query = $this->con->prepare("SELECT * FROM categories");
+        $query->execute();
+
+        $html = "<div class='previewCategories'>
+                    <h1>TV Shows</h1>";
+
+        while($row = $query->fetch(PDO::FETCH_ASSOC)){
+            $html.=$this->htmlGeneratorCategory($row,null,true,false);
+        }
+
+        return $html."</div>";
+    }
+
+    public function showMovieCategories(){
+        $query = $this->con->prepare("SELECT * FROM categories");
+        $query->execute();
+
+        $html = "<div class='previewCategories'>
+                    <h1>Movies</h1>";
+
+        while($row = $query->fetch(PDO::FETCH_ASSOC)){
+            $html.=$this->htmlGeneratorCategory($row,null,false,true);
+        }
+
+        return $html."</div>";
+    }
+
     public function showCategory($categoryId, $title=null){
         $query = $this->con->prepare("SELECT * FROM categories WHERE id=:id");
         $query->bindValue(":id",$categoryId);
@@ -45,10 +73,10 @@ class CategoryContainers{
             $entities = EntityProvider::getEntities($this->con, $categoryId, 20);
         }
         else if($tvShows){
-
+            $entities = EntityProvider::getTvEntities($this->con,$categoryId,20);
         }
         else{
-
+            $entities = EntityProvider::getMovieEntities($this->con,$categoryId,20);
         }
 
         if(sizeof($entities)==0){

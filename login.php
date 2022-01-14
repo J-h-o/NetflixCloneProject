@@ -53,7 +53,7 @@ require_once("includes/classes/Constants.php");
                         ?>
                     <input type="text" name="username" placeholder="Username" value="<?php getInputValue("username");?>" required>
                     <input type="password" name="password" placeholder="Password" required>
-                    <input type="submit" name="submitForm" value="Sign-Up">
+                    <input type="submit" name="submitForm" value="Sign-In">
 
                 </form>
 

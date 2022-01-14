@@ -3,6 +3,7 @@ require_once("includes/header.php");
 require_once("includes/classes/SeasonProvider.php");
 require_once("includes/classes/Season.php");
 require_once("includes/classes/Video.php");
+require_once("includes/classes/VideoProvider.php");
 
 if(!isset($_GET["id"])){
     ErrorMessage::show("No ID passed into page. :(");
