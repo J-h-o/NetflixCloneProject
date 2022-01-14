@@ -7,9 +7,13 @@ Cloneflix is a university project I made using PHP, HTML, CSS, JS and utilizing 
 * [x] Browse page
 * [x] Login
 * [x] Signup
-* [ ] Video playback page
+* [x] Video playback page
+* [x] Track user watch activity
 * [ ] User account
 * [ ] Payments
+* [ ] Nextup
+* [ ] Shows page
+* [ ] Movies page
 
 To be updated as project progresses.
 
