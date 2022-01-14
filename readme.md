@@ -9,11 +9,11 @@ Cloneflix is a university project I made using PHP, HTML, CSS, JS and utilizing 
 * [x] Signup
 * [x] Video playback page
 * [x] Track user watch activity
-* [ ] User account
+* [x] User account
 * [ ] Payments
-* [ ] Nextup
-* [ ] Shows page
-* [ ] Movies page
+* [x] Nextup
+* [x] Shows page
+* [x] Movies page
 
 To be updated as project progresses.
 
